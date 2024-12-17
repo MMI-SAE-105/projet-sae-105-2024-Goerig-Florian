@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Noto+Sans+JP:wght@100..900&display=swap');
+
+/* Vendors */
+@import "/src/css/vendors/normalize.css";
+
+/* Utils */
+@import "utils/variables.css";
+
+/* Base */
+@import "base/main.css";
+@import "base/media.css";
+
+/* Layout */
+@import "layout/header.css";
+@import "layout/footer.css";
+
+/* Components */
+@import "components/menu.css";
+@import "components/hero.css";
+@import "components/a_propos.css";
+@import "components/intro.css";
+@import "components/button.css";
+@import "components/form.css";
+@import "components/index.css";
+@import "components/caroussel.css";
+@import "components/filmographie.css";
