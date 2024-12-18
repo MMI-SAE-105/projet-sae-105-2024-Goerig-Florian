@@ -1,13 +1,14 @@
 :root {
     /* Color styles */
+    --primary: #ffc85a;
     --black: black;
-    --gray: #898989;
-    --blue: #5FBAFE;
-    --green: #01AB27;
+    --gray-800: #252525;
+    --gray-600: #7b7b7b;
+    --gray-400: #d4d4d4;
+    --gray-200: #f7f7f7;
     --white: white;
-    --gradient: radial-gradient(184.83% 194.44% at 105.85% 4.1%, rgba(95, 186, 254, 0.60) 46.89%, rgba(105, 211, 129, 0.50) 58.93%);
-
-    /* Selection colors Hex */
+    --gradient: linear-gradient(90deg, #623FA1 -1.91%, #696275 50.94%, #0044A5 100%);
+__
     /* Text-size styles */
     --fs-xs: 0.75rem;
     --fs-s: 0.875rem;
@@ -19,9 +20,8 @@
     --fs-4xl: 3.125rem;
 
     /* Font-family styles */
-    --font-sans-serif: "NOTO SANS JP", sans-serif;
-    --font-sans-serif: "Alexandria", sans-serif;
-
+    --font-sans-serif: "Inter", sans-serif;
+    --font-serif: "Playfair Display", serif;
 
     /* Espaces */
     --space1x: 10px;

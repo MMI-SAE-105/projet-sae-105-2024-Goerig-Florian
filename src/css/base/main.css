@@ -5,53 +5,29 @@
 }
 
 body {
-    background-color: var(--gray-white);
+    font-family: var(--font-sans-serif);
+    font-size: var(--fs-s);
+    line-height: 1.6;
+    background-color: var(--white);
     font-weight: 300;
-    margin-top: 130;
-    overflow-x: hidden;
 }
 
 h1,
 h2 {
     font-weight: normal;
     line-height: 1.1;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-weight: bold;
 }
 
 h1 {
-    font-size: 24px;
-    color: var(--green);
-    text-transform: uppercase;
-    text-align: center;
-
+    font-size: var(--fs-4xl);
 }
 
 h2 {
-    font-size: 20px;
-    color: #000;
+    font-size: var(--fs-2xl);
 }
 
-h3,
-h4 {
-    font-family: 'Alexandria', sans-serif;
-    font-size: 16px;
+h3 {
     line-height: 1.4;
-    color: var(black);
-}
-
-p {
-    font-family: 'Alexandria', sans-serif;
-    font-size: 16px;
-}
-
-.gradient {
-    background: var(--dgrad, linear-gradient(180deg, #623FA1 0%, #757362 50%, #0044A5 100%));
-    transition: all 0.3s ease-in-out;
-}
-
-.container {
-    padding: 0 1rem;
 }
 
 button,
@@ -67,11 +43,10 @@ textarea {
 }
 
 /* Pour enlever l'apparence par défaut des listes */
-.list__unstyled {
+.list-unstyled {
     list-style: none;
-    margin: 0 ;
-    display: flex;
-   
+    margin: 0;
+    padding: 0;
 }
 
 /* Pour rendre invisible mais laisser accessible */
