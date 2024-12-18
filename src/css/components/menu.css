@@ -3,10 +3,9 @@
     display: flex;
     position: fixed;
     inset: 0;
-    z-index: 1;
+    z-index: 3;
     color: var(--black);
     flex-direction: column;
-    justify-content: space-between;
     padding: var(--space5x) var(--space3x) var(--space3x);
     transform: translateX(-100vw);
     transition: all 0.3s ease-in-out;
@@ -27,8 +26,8 @@
 }
 
 .menu__link--silent {
-  color: var(--gray-600);
-  font-size: var(--fs-s);
+    color: var(--gray-600);
+    font-size: var(--fs-s);
 }
 
 .menu__item {
@@ -37,12 +36,22 @@
     border-bottom: 1px solid var(--black);
 }
 
-.menu__social-network,
+.menu__secondaire {
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.menu__langue,
 .menu__terms {
-  display: flex;
-  gap: var(--space2x);
-  justify-content: end;
-  margin-bottom: var(--space2x);
+    gap: var(--space2x);
+    justify-content: center;
+    margin-bottom: var(--space3x);
+    align-items:  center;
+    gap: var(--space4x);
+    display: inline-block;
+    padding-left: 10px;
 }
 
 .menu-btn {
@@ -89,4 +98,26 @@ Ne pas oublier d'ajouter une transition plus haut pour l'animation */
 .menu-btn[aria-expanded="true"] .menu-btn__bar::after {
     transform: rotate(90deg);
     top: 0;
+}
+
+
+.menu__langue span {
+    display: inline;
+    margin: 0;
+    font-size: 18px;
+   
+}
+
+.menu__langue a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 20px;
+    
+}
+
+.header__menu.menu {
+    padding: 8%;
+    padding-left: 10px;
+    padding-right: 10px;
+
 }
