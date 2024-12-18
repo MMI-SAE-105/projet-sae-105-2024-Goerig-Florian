@@ -8,6 +8,7 @@
     align-items: center;
     justify-content: space-between;
     transition: all 0.5s ease-in-out;
+    
 
 }
 
@@ -24,13 +25,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: white
+    background: var(--dgrad-header, linear-gradient(90deg, #623FA1 -1.91%, #696275 50.94%, #0044A5 100%));
 }
 
 .page__body {
-    background: white
+    background: var(--dgrad-header, linear-gradient(90deg, #623FA1 -1.91%, #696275 50.94%, #0044A5 100%));
 }
-
 .header__menu-btn menu-btn {
     display: flex;
 }

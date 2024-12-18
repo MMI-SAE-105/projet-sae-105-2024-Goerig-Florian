@@ -77,3 +77,8 @@ textarea {
     height: auto;
     margin: 0;
 }
+
+.gradient {
+    background: var(--dgrad-header, linear-gradient(90deg, #623FA1 -1.91%, #696275 50.94%, #0044A5 100%));
+    transition: all 0.3s ease-in-out;
+}

@@ -47,6 +47,8 @@
                         monde de demain, entre
                         science-fiction et archéologie du futur.
                         Plongez dans un voyage à travers le temps où chaque objet raconte une nouvelle histoire.</p>
+                        <img class="page__image page__image--welcome" src="/assets/img/accueil.webp"
+                            alt="image avec une personne face à une ville futursite avec le en haut de l'image le nom du site : vestige futur">
                 </section>
             </section>
         </main>
@@ -100,7 +102,7 @@
 <script>
     const handleScroll = () => {
         const header = document.querySelector('.header')
-        if (window.scrollY > 300) {
+        if (window.scrollY > 50) {
             header.classList.add('gradient')
         } else {
             header.classList.remove('gradient')
@@ -109,5 +111,4 @@
 
     window.addEventListener('scroll', handleScroll)
 </script>
-
 </html>
