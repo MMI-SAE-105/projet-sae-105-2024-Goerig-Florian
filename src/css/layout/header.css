@@ -34,3 +34,16 @@
 .header__menu-btn menu-btn {
     display: flex;
 }
+
+.header_droite
+{
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space3x);
+  }
+
+  .header__anglais
+{
+    width: 30px;
+    height: 30px;
+}

@@ -1,0 +1,87 @@
+.card__duotone {
+    position: relative;
+    filter: grayscale(100%) contrast(1.2) brightness(0.8);
+    /* Ajustement du filtre */
+}
+
+.card__duotone::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 255, 0.6), rgba(0, 0, 255, 0.3));
+    mix-blend-mode: multiply;
+    /* Mélange pour l'effet duotone */
+    pointer-events: none;
+}
+.card__title {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    color: #FFF;
+    z-index: 2;
+}
+
+.card__title-link {
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Orbitron', sans-serif;
+    /* Exemple de police futuriste */
+}
+.card__caption {
+    background-color: #1B3665;
+    /* Bleu de fond */
+    padding: 20px;
+    color: #FFF;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.card__excerpt {
+    margin-bottom: 15px;
+    font-family: 'merriweather', sans-serif;
+}
+
+.card__link {
+    display: inline-block;
+    background-color: #824BA9;
+    color: #FFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+    margin-left: 40%;
+    /* Alignement à droite */
+    margin-right: 20px;
+    /* Ajustez selon votre design */
+    font-family: 'Orbitron', sans-serif;
+}
+
+.card__link:hover {
+    background-color: #6C3C92;
+    /* Légèrement plus foncé au survol */
+}
+.card {
+    width: 100%;
+    max-width: 400px;
+    /* Ajustez selon la taille voulue */
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.card__duotone img {
+    width: 100%;
+    height: auto;
+    display: block;
+}

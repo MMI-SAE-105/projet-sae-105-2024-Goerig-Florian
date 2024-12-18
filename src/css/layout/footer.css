@@ -24,11 +24,7 @@ footer p {
     color: white
 }
 
-footer>*:not(:first-child) {
-    border-top: 4px solid #623FA1;
 
-
-}
 
 .footer>nav: last-child {
     display: flex
@@ -56,8 +52,11 @@ footer>*:not(:first-child) {
 
 .footer__legal {
     color: #fff;
+    border : 0;
 }
-
+.footer_legal-text{
+    border-bottom: 0;
+}
 footer a {
     text-decoration: none;
     color: #fff;
@@ -90,7 +89,7 @@ footer a {
     justify-content: space-between;
     padding-right: 10%;
     margin: 10px;
-    padding-top: 10px;
+    padding-top: 20px;
     
 }
 
@@ -103,3 +102,4 @@ footer a {
 .footer{
     padding-top: 0;
 }
+

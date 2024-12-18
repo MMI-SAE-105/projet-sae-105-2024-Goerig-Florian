@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="src/css/style.css">
     <script type="module" src="src/js/script.js"></script>
     <link rel="icon" href="/assets/icons/LOGO.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    
     <title>Document</title>
 </head>
 
@@ -15,9 +17,14 @@
         <a class="header__logo-link" href="/">
             <img class="header__logo" src="/assets/icons/mini_logo_header.svg" alt="Logo " />
         </a>
-        <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav">
-            <span class="menu-btn__bar" aria-hidden="true"></span>
-        </button>
+        <nav class="header_droite">
+            <div>
+                <img class="header__anglais" src="/assets/icons/francais.svg" alt="Logo " />
+            </div>
+            <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav">
+                <span class="menu-btn__bar" aria-hidden="true"></span>
+            </button>
+        </nav>
         <nav class="header__menu menu" id="mainNav" aria-hidden="true">
             <ul class="menu__list list-unstyled">
                 <li class="menu__item">
@@ -41,16 +48,29 @@
                 <section class="page__section page__section--welcome container">
                     <img class="page__image page__image--welcome" src="/assets/img/accueil.webp"
                         alt="image avec une personne face à une ville futursite avec le en haut de l'image le nom du site : vestige futur">
+                    <hr class="separator">
                     <p class="page__text">Bienvenue dans un futur lointain où les objets d'aujourd'hui sont devenus des
                         mystères du passé.
                         À travers des histoires captivantes, explorez ce que notre quotidien présent inspire dans un
                         monde de demain, entre
                         science-fiction et archéologie du futur.
                         Plongez dans un voyage à travers le temps où chaque objet raconte une nouvelle histoire.</p>
-                        <img class="page__image page__image--welcome" src="/assets/img/accueil.webp"
-                            alt="image avec une personne face à une ville futursite avec le en haut de l'image le nom du site : vestige futur">
+                    <hr class="separator">
                 </section>
-            </section>
+                <article class="card">
+                    <div class="card__duotone">
+                        <img src="/assets/img/plateforme.webp" alt="Plateforme pétrolière">
+                    </div>
+
+                    <h1 class="card__title">
+                        <a class="card__title-link" href="">Plateforme pétrolière</a>
+                    </h1>
+                    <div class="card__caption">
+                        <p class="card__excerpt">Découvrez comment les plateformes pétrolières, symboles de notre
+                            époque, sont perçues en 2500 : vestiges technologiques
+                            ou monuments oubliés ?</p>
+                        <a class="card__link" href="">Lire l'article</a>
+                                   </article>
         </main>
         <footer class="footer">
             <section class="menu__footer">
@@ -66,11 +86,14 @@
                 </div>
                 <img class="footer__logo" src="/assets/icons/logo_texte.svg" alt="logo">
             </section>
+            <hr class="separator">
             <section class="footer__contact">
                 <p>florian goerig<br>
                     MMI 1 B1<br>
                     <a href="mailto:florian_goerig@hotmail.fr">florian_goerig@hotmail.fr</a>
                 </p>
+                <hr class="separator">
+
             </section>
             <section class="footer__socials">
                 <ul class="footer__list list-unstyled">
@@ -90,6 +113,8 @@
                                 src="/assets/icons/Youtube_white.svg" alt="Youtube"></a></li>
                 </ul>
             </section>
+            <hr class="separator">
+
             <section class="footer__legal">
                 <h4 class="footer__legal-title">Mentions légales </h4>
                 <p class="footer__legal-text">Ce site est un projet réalisé dans le cadre d’un exercice pédagogique au
@@ -111,4 +136,5 @@
 
     window.addEventListener('scroll', handleScroll)
 </script>
+
 </html>

@@ -82,3 +82,9 @@ textarea {
     background: var(--dgrad-header, linear-gradient(90deg, #623FA1 -1.91%, #696275 50.94%, #0044A5 100%));
     transition: all 0.3s ease-in-out;
 }
+
+.separator {
+border: 2px solid #623FA1;
+background: var(--violet, #623FA1);
+    box-shadow: 0px 0px 5px 0px #FFF;
+}
