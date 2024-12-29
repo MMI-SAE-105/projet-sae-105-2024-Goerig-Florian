@@ -74,14 +74,22 @@
 }
 .card {
     width: 100%;
-    max-width: 400px;
+    
     /* Ajustez selon la taille voulue */
-    margin: 0 auto;
+    margin: 0;
     overflow: hidden;
     position: relative;
+    padding: 20px;
+    
 }
 .card__duotone img {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.card p {
+    text-align: justify;
+    font-family: 'Orbitron', serif;
+, 
 }

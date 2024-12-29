@@ -10,6 +10,10 @@ body {
     line-height: 1.6;
     background-color: var(--white);
     font-weight: 300;
+    margin : 0
+    padding: 0;
+    
+    
 }
 
 h1,
@@ -81,6 +85,7 @@ textarea {
 .gradient {
     background: var(--dgrad-header, linear-gradient(90deg, #623FA1 -1.91%, #696275 50.94%, #0044A5 100%));
     transition: all 0.3s ease-in-out;
+width: 100%;
 }
 
 .separator {
