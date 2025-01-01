@@ -1,6 +1,7 @@
 .card__duotone {
     position: relative;
-    filter: grayscale(100%) contrast(1.2) brightness(0.8);
+    filter: grayscale(100%);
+
     /* Ajustement du filtre */
 }
 
@@ -13,9 +14,12 @@
     height: 100%;
     background: linear-gradient(to bottom, rgba(0, 0, 255, 0.6), rgba(0, 0, 255, 0.3));
     mix-blend-mode: multiply;
+
+
     /* Mélange pour l'effet duotone */
     pointer-events: none;
 }
+
 .card__title {
     position: absolute;
     top: 20%;
@@ -35,6 +39,7 @@
     font-family: 'Orbitron', sans-serif;
     /* Exemple de police futuriste */
 }
+
 .card__caption {
     background-color: #1B3665;
     /* Bleu de fond */
@@ -72,24 +77,28 @@
     background-color: #6C3C92;
     /* Légèrement plus foncé au survol */
 }
+
 .card {
     width: 100%;
-    
+
     /* Ajustez selon la taille voulue */
     margin: 0;
     overflow: hidden;
     position: relative;
     padding: 20px;
-    
+
 }
+
 .card__duotone img {
     width: 100%;
     height: auto;
     display: block;
+    
+
 }
 
 .card p {
     text-align: justify;
     font-family: 'Orbitron', serif;
-, 
+    ,
 }
