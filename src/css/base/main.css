@@ -4,13 +4,11 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: var(--font-sans-serif);
-    font-size: var(--fs-s);
+body {   
     line-height: 1.6;
     background-color: var(--white);
     font-weight: 300;
-    margin : 0
+    margin : 0;
     padding: 0;
     
     
@@ -20,19 +18,28 @@ h1,
 h2 {
     font-weight: normal;
     line-height: 1.1;
+    font-family: 'Orbitron', sans-serif;
 }
 
 h1 {
-    font-size: var(--fs-4xl);
+    font-size: 32px;
+    font-weight: bold;
 }
 
 h2 {
-    font-size: var(--fs-2xl);
+    font-size: var 32px;
+    color: var(--bleu);
+    font-weight: bold;
+    }
+
+h3, {
+    font-size: var 24px;
+    font-family: 'merriweather', sans-serif;
+    font-weight: normal;
+    margin : 10px 10px;
+    }
 }
 
-h3 {
-    line-height: 1.4;
-}
 
 button,
 input,
@@ -80,7 +87,8 @@ textarea {
     width: 100%;
     height: auto;
     margin: 0;
-}
+    margin-left: auto;
+    margin-right: auto;
 
 .gradient {
     background: var(--dgrad-header, linear-gradient(90deg, #623FA1 -1.91%, #696275 50.94%, #0044A5 100%));
@@ -93,3 +101,4 @@ border: 2px solid #623FA1;
 background: var(--violet, #623FA1);
     box-shadow: 0px 0px 5px 0px #FFF;
 }
+

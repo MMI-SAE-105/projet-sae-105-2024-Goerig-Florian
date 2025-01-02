@@ -3,8 +3,8 @@
 
 À compléter :
 
-- NOM :
-- PRÉNOM :
-- GROUPE :
+- NOM : goerig
+- PRÉNOM : florian
+- GROUPE : MMI 1 B1
 - URL du site :
 - URL FIGMA :

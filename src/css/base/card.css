@@ -2,6 +2,7 @@
     position: relative;
     filter: grayscale(100%);
 
+
     /* Ajustement du filtre */
 }
 
@@ -14,6 +15,8 @@
     height: 100%;
     background: linear-gradient(to bottom, rgba(0, 0, 255, 0.6), rgba(0, 0, 255, 0.3));
     mix-blend-mode: multiply;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 
 
     /* Mélange pour l'effet duotone */
@@ -31,12 +34,18 @@
     text-align: center;
     color: #FFF;
     z-index: 1;
-}
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 
-.card__title-link {
-    text-decoration: none;
-    color: inherit;
-    font-family: 'Orbitron', sans-serif;
+
+    .card__title-link {
+        text-decoration: none;
+        color: inherit;
+        font-family: 'Orbitron', sans-serif;
+        font-weight: bold;
+
+    }
+
     /* Exemple de police futuriste */
 }
 
@@ -47,13 +56,16 @@
     color: #FFF;
     font-size: 1rem;
     line-height: 1.5;
-    font-family: Arial, sans-serif;
+    font-family: 'merriweather', sans-serif;
     text-align: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .card__excerpt {
     margin-bottom: 15px;
     font-family: 'merriweather', sans-serif;
+
 }
 
 .card__link {
@@ -71,10 +83,12 @@
     margin-right: 20px;
     /* Ajustez selon votre design */
     font-family: 'Orbitron', sans-serif;
+
 }
 
 .card__link:hover {
     background-color: #6C3C92;
+
     /* Légèrement plus foncé au survol */
 }
 
@@ -87,13 +101,16 @@
     position: relative;
     padding: 20px;
 
+
 }
 
 .card__duotone img {
     width: 100%;
     height: auto;
     display: block;
-    
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
 
 }
 
@@ -101,4 +118,97 @@
     text-align: justify;
     font-family: 'Orbitron', serif;
     ,
+}
+
+/* Conteneur principal */
+.cards-container-custom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: #1b3665;
+    /* Fond bleu */
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Titre au-dessus des articles */
+.card-custom__header h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    /* Couleur blanche */
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Conteneur des cartes */
+.card-custom__body {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+}
+
+/* Cartes individuelles */
+.card-custom {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #1e1e2f;
+    /* Fond sombre corrigé */
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    color: #ffffff;
+    background-color: #1b3665;
+    /* Texte blanc */
+}
+
+/* Images dans les cartes */
+.card-custom__image img {
+    width: 100%;
+    height: auto;
+}
+
+/* Contenu des articles */
+.card-custom__content {
+    padding: 10px;
+    background-color: #1b3665;
+}
+
+/* Titre des cartes */
+.card-custom__title {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: orbitron, sans-serif;
+    /* Texte blanc corrigé */
+}
+
+/* Liens cliquables */
+.card-custom a {
+    text-decoration: none;
+    /* Supprime le soulignement */
+    color: inherit;
+    /* Hérite de la couleur blanche définie par .card-custom__title */
+}
+
+/* Lien au survol */
+.card-custom a:hover {
+    color: #00ccff;
+    /* Couleur différente au survol */
+}
+
+/* Séparateur vertical */
+.card-custom__separator {
+    width: 2px;
+    background-color: #ffffff;
+    /* Trait blanc */
+    margin: 0 10px;
 }
