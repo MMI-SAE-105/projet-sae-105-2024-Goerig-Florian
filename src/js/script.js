@@ -59,3 +59,4 @@ lightBox.addEventListener("click", (evt) => {
 });
 
 
+

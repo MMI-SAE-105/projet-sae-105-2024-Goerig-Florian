@@ -4,12 +4,12 @@
     position: fixed;
     inset: 0;
     z-index: 3;
-    color: var(--black);
+    color: black;
     flex-direction: column;
     padding: var(--space5x) var(--space3x) var(--space3x);
     transform: translateX(-100vw);
     transition: all 0.3s ease-in-out;
-    font-family: noto-sans, sans-serif;
+    font-family: 'Merriweather', sans-serif;
     background: var(--dgrad, linear-gradient(180deg, #623FA1 0%, #757362 50%, #0044A5 100%));
 }
 
@@ -33,7 +33,7 @@
 .menu__item {
     margin-bottom: var(--space3x);
     padding-bottom: var(--space1x);
-    border-bottom: 1px solid var(--black);
+    border-bottom: 2px solid var(--black);
 }
 
 .menu__secondaire {
@@ -61,20 +61,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: transparent;
+    border : none
+   
 }
 
 .menu-btn__bar,
 .menu-btn__bar::before,
 .menu-btn__bar::after {
     content: "";
-    background: var(--black);
-    height: 2px;
+    background: black;
+    height: 3px;
     width: 100%;
     position: absolute;
     border-radius: 2px;
     left: 0;
     z-index: 10;
     transition: all 0.4s ease-in-out;
+    
 }
 
 .menu-btn__bar::before {

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script type="module" src="src/js/script.js"></script>
+    <link rel="icon" href="/assets/icons/LOGO.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <title>Frise chronlogique</title>
+</head>
+
+<body>
+    <header class="header">
+        <a class="header__logo-link" href="/">
+            <img class="header__logo" src="/assets/icons/mini_logo_header.svg" alt="Logo " />
+        </a>
+        <nav class="header_droite">
+            <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav">
+                <span class="menu-btn__bar" aria-hidden="true"></span>
+            </button>
+        </nav>
+        <nav class="header__menu menu" id="mainNav" aria-hidden="true">
+            <div class="menu__langue">
+                <span>FR</span> / <span>EN</span>
+            </div>
+
+            <ul class="menu__list list-unstyled">
+                <li class="menu__item">
+                    <a class="menu__link" href="plateforme.html">plateforme pétrolière</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="frise.html">Frise chronologique</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="deepwater.html">DeepWater Horizon</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="team.html">Team</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="timeline">
+            <div class="timeline__title">
+                <h1>Frise Chronologique</h1>
+            </div>
+            <img src="assets/img/frise_entiere.webp" alt="Frise chronologique" class="timeline__background">
+            <div class="timeline__event timeline__event--left">
+                <p><strong>1891 :</strong><br>
+                    <strong>Première plateforme offshore en eau douce (Lac St. Mary’s, Ohio).</strong></p>
+            </div>
+            <div class="timeline__event timeline__event--right">
+                <p><strong>1930 :</strong><br>
+                    Premières plateformes en eaux peu profondes dans le Golfe du Mexique.</p>
+            </div>
+            <div class="timeline__event timeline__event--left">
+                <p><strong>1947 :</strong><br>
+                    Première plateforme offshore hors de vue des côtes (Golfe du Mexique).</p>
+            </div>
+            <div class="timeline__event timeline__event--right">
+                <p><strong>1960 :</strong><br>
+                    Développement des plateformes fixes pour les eaux peu profondes.</p>
+            </div>
+            <div class="timeline__event timeline__event--left">
+                <p><strong>1980 :</strong><br>
+                    Apparition des plateformes TLP (Tension Leg Platforms).</p>
+            </div>
+            <div class="timeline__event timeline__event--right">
+                <p><strong>2000 :</strong><br>
+                    Innovations pour l’exploitation en eaux ultra-profondes.</p>
+            </div>
+        </div>
+
+    </main>
+    <footer class="footer">
+        <section class="menu__footer">
+            <div class="footer__left">
+                <nav class="footer__nav">
+                    <ul class="footer__list"></ul>
+                    <li class="footer__item"><a class="footer__link" href="">Autres projets</a></li>
+                    <li class="footer__item"><a class="footer__link" href="">A propos</a></li>
+                    <li class="footer__item"><a class="footer__link" href="">Contactez Nous</a></li>
+                    <li class="footer__item"><a class="footer__link" href="">Glossaire</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <img class="footer__logo" src="/assets/icons/logo_texte.svg" alt="logo">
+        </section>
+        <hr class="separator">
+        <section class="footer__contact">
+            <p>florian goerig<br>
+                MMI 1 B1<br>
+                <a href="mailto:florian_goerig@hotmail.fr">florian_goerig@hotmail.fr</a>
+            </p>
+            <hr class="separator">
+
+        </section>
+        <section class="footer__socials">
+            <ul class="footer__list list-unstyled">
+                <li><a href="https://www.iut-nfc.univ-fcomte.fr/b-u-t-metiers-du-multimedia-et-de-linternet/"><img
+                            src="/assets/icons/mmi_white.svg" alt="Logo MMI"></a></li>
+                <li><a href="https://www.tiktok.com/@mmi_montbeliard"><img src="/assets/icons/TikTok_white.svg"
+                            alt="Tiktok"></a>
+
+                <li><a href="https://www.linkedin.com/school/mmimontbeliard/posts/?feedView=all"><img
+                            src="/assets/icons/LinkedIn_white.svg" alt="Linkedin"></a></li>
+                <li><a href="https://www.facebook.com/mmimontbeliard/?locale=fr_FR"><img
+                            src="/assets/icons/Faebook_white.svg" alt="Facebook"></a></li>
+                <li><a
+                        href="https://www.instagram.com/mmi_montbeliard?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img
+                            src="/assets/icons/Instagram_white.svg" alt="Instagram"></a></li>
+                <li><a href="https://www.youtube.com/channel/UCgW7jR8McJwjxPh0fDQaXGg/videos"><img
+                            src="/assets/icons/Youtube_white.svg" alt="Youtube"></a></li>
+            </ul>
+        </section>
+        <hr class="separator">
+
+        <section class="footer__legal">
+            <h4 class="footer__legal-title">Mentions légales </h4>
+            <p class="footer__legal-text">Ce site est un projet réalisé dans le cadre d’un exercice pédagogique au
+                département MMI Montbéliard (25)
+            </p>
+        </section>
+    </footer>
+</body>
+
+</html>
+</body>
+<script>
+    const handleScroll = () => {
+        const header = document.querySelector('.header')
+        if (window.scrollY > 0) {
+            header.classList.add('gradient')
+        } else {
+            header.classList.remove('gradient')
+        }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+</script>
+
+</html>

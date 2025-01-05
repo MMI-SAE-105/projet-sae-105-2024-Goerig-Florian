@@ -39,7 +39,9 @@ h3, {
     margin : 10px 10px;
     }
 }
-
+p {
+    text-decoration: none;
+}
 
 button,
 input,

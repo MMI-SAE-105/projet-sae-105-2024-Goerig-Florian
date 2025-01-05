@@ -32,4 +32,5 @@
 
 .page__image {
     max-width: 100%;
+    z-index: 3;
 }

@@ -88,15 +88,18 @@ footer a {
 .menu__footer {
     display: flex;
     justify-content: space-between;
-    padding-right: 10%;
-    margin: 10px;
+   
     padding-top: 20px;
+    
+    
     
 }
 
 .footer__logo {
     max-width: 35%;
-    padding-block-start: 10px;
+    margin-right: 20px;
+    
+    
 
 }
 

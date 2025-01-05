@@ -2,7 +2,6 @@
     position: relative;
     filter: grayscale(100%);
 
-
     /* Ajustement du filtre */
 }
 
@@ -17,6 +16,7 @@
     mix-blend-mode: multiply;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+
 
 
     /* Mélange pour l'effet duotone */
@@ -70,7 +70,7 @@
 
 .card__link {
     display: inline-block;
-    background-color: #824BA9;
+    background-color: #000000;
     color: #FFF;
     padding: 10px 20px;
     text-decoration: none;
@@ -86,11 +86,7 @@
 
 }
 
-.card__link:hover {
-    background-color: #6C3C92;
 
-    /* Légèrement plus foncé au survol */
-}
 
 .card {
     width: 100%;
@@ -120,95 +116,129 @@
     ,
 }
 
-/* Conteneur principal */
+/* Conteneur principal pour aligner les deux cartes */
+
 .cards-container-custom {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    /* Met les cartes côte à côte */
+    justify-content: space-between;
+    /* Espace uniforme entre les cartes */
+    align-items: stretch;
+    /* Force les cartes à avoir la même hauteur */
+    gap: 30px;
+    /* Espacement horizontal entre les cartes */
+    background-color: #ffffff;
+    /* Fond blanc */
+    border-radius: 10px;
+    /* Coins arrondis pour le conteneur */
+    width: 90%;
+    max-width: 1200px;
+    /* Largeur maximale */
+    margin: 20px auto;
+    /* Marge autour du conteneur */
     padding: 20px;
+    /* Espacement intérieur du conteneur */
+    box-sizing: border-box;
+    /* Inclut le padding et la bordure dans la largeur totale */
+    
+}
+
+/* Styles des cartes individuelles */
+
+.card-custom {
+    flex: 1;
+    /* Les cartes occupent une largeur égale */
+    display: flex;
+    flex-direction: column;
+    /* Contenu organisé verticalement */
+    justify-content: space-between;
+    /* Équilibre le contenu verticalement */
     background-color: #1b3665;
     /* Fond bleu */
     border-radius: 10px;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Titre au-dessus des articles */
-.card-custom__header h2 {
-    font-size: 1.5rem;
-    color: #ffffff;
-    /* Couleur blanche */
-    font-family: 'Arial', sans-serif;
-    text-transform: uppercase;
-    margin: 0;
-}
-
-/* Conteneur des cartes */
-.card-custom__body {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    gap: 10px;
-    width: 100%;
-}
-
-/* Cartes individuelles */
-.card-custom {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    background-color: #1e1e2f;
-    /* Fond sombre corrigé */
-    border-radius: 10px;
+    /* Coins arrondis */
     overflow: hidden;
+    /* Masque tout débordement */
     text-align: center;
     color: #ffffff;
-    background-color: #1b3665;
     /* Texte blanc */
+    height: 300px;
+    /* Réduit la hauteur totale pour des cartes plus carrées */
+    box-sizing: border-box;
+    /* Inclut le padding dans la hauteur totale */
 }
 
 /* Images dans les cartes */
 .card-custom__image img {
     width: 100%;
+    /* Les images occupent toute la largeur */
     height: auto;
+    /* Gardent leurs proportions */
+    max-height: 150px;
+    /* Limite la hauteur maximale des images */
+    object-fit: cover;
+    /* Coupe les images si elles dépassent */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
-/* Contenu des articles */
-.card-custom__content {
-    padding: 10px;
-    background-color: #1b3665;
-}
-
-/* Titre des cartes */
 .card-custom__title {
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
     color: #ffffff;
-    font-family: orbitron, sans-serif;
-    /* Texte blanc corrigé */
+    font-family: 'Orbitron', sans-serif;
+    /* Police futuriste */
+    margin-bottom: 5px;
+    /* Réduit l'espacement sous le titre */
 }
 
-/* Liens cliquables */
-.card-custom a {
+.card-custom__text {
+    font-size: 14px;
+    line-height: 1.4;
+    /* Réduit l'espacement vertical dans le texte */
+   margin: 10px 5px;
+    /* Réduit l'espacement entre le texte et le bas de la carte */
+    font-family: 'Orbitron', sans-serif;
+    
+}
+
+.card-custom__content {
+    flex-grow: 1;
+    /* Permet au contenu de s'adapter à l'espace disponible */
+   padding: 5px;
+    background-color: #1b3665;
+    /* Fond bleu */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Équilibre le titre et le texte */
+    
+}
+
+/* Lien enveloppant toute la carte */
+.card-custom-link {
+    display: block;
+    /* Transforme le lien en bloc */
+    width: 100%;
+    /* S'assure que le lien occupe toute la largeur de la carte */
+    height: 100%;
+    /* Le lien occupe toute la hauteur de la carte */
     text-decoration: none;
     /* Supprime le soulignement */
     color: inherit;
-    /* Hérite de la couleur blanche définie par .card-custom__title */
+    /* Hérite de la couleur du texte */
 }
-
-/* Lien au survol */
-.card-custom a:hover {
-    color: #00ccff;
-    /* Couleur différente au survol */
-}
-
-/* Séparateur vertical */
+/* Style personnalisé pour les séparateurs dans les cartes */
 .card-custom__separator {
-    width: 2px;
-    background-color: #ffffff;
-    /* Trait blanc */
-    margin: 0 10px;
+    border: none;
+    /* Supprime la bordure par défaut */
+    border-top: 2px solid #ffffff;
+    /* Ajoute une ligne blanche */
+    margin: 10px 0;
+    /* Espacement vertical autour de la ligne */
+    width: 80%;
+    /* Réduit la largeur à 80% du conteneur */
+    align-self: center;
+    /* Centre la ligne horizontalement */
 }

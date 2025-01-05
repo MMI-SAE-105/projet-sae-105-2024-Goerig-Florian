@@ -32,10 +32,10 @@
                     <a class="menu__link" href="plateforme.html">plateforme pétrolière</a>
                 </li>
                 <li class="menu__item">
-                    <a class="menu__link" href="about.html">About</a>
+                    <a class="menu__link" href="frise.html">Frise chronologique</a>
                 </li>
                 <li class="menu__item">
-                    <a class="menu__link" href="contact.html">Contact</a>
+                    <a class="menu__link" href="deepwater.html">DeepWater Horizon</a>
                 </li>
                 <li class="menu__item">
                     <a class="menu__link" href="team.html">Team</a>
@@ -48,7 +48,7 @@
             <section class="section">
                 <section class="page__section ">
                     <h1 class="card__title">
-                        <a class="card__title-link" href="">Plateforme Pétrolière</a>
+                        <a class="card__title-link">Plateforme Pétrolière</a>
                     </h1>
                     <img class="page__image page__image--welcome" src="/assets/img/plateforme.webp"
                         alt="image d'une plateforme pétrolière en ruine avec comme titre : vestige futur">
@@ -184,45 +184,35 @@
                 </p>
             </section>
             <hr class="separator">
-            <aside class="cards-container-custom">
-                <!-- Titre au-dessus des articles -->
-                <div class="card-custom__header">
-                    <h2>À lire aussi</h2>
-                </div>
-
-                <!-- Conteneur des cartes -->
-                <div class="card-custom__body">
-                    <!-- Première carte -->
+            <div class="cards-container-custom">
+                <!-- Première carte -->
+                <a href="deepwater.html" class="card-custom-link">
                     <article class="card-custom">
-                        <a href="deep-water.html">
-                            <div class="card-custom__image">
-                                <img src="assets/img/deepwater_page_accueil.webp" alt="Deepwater">
-                            </div>
-                            <div class="card-custom__content">
-                                <p class="card-custom__title">Deepwater, une catastrophe devenue légendaire</p>
-                            </div>
-                        </a>
+                        <div class="card-custom__image">
+                            <img src="assets/img/deepwater_page_accueil.webp" alt="Deepwater">
+                        </div>
+                        <div class="card-custom__content">
+                            <h2 class="card-custom__title">Deepwater</h2>
+                            <hr class="card-custom__separator">
+                            <p class="card-custom__text">Une catastrophe devenue légendaire.</p>
+                        </div>
                     </article>
+                </a>
 
-                    <!-- Séparateur -->
-                    <div class="card-custom__separator"></div>
-
-                    <!-- Deuxième carte -->
+                <!-- Deuxième carte -->
+                <a href="roland_emmerich.html" class="card-custom-link">
                     <article class="card-custom">
-                        <a href="roland_emmerich.html">
-                            <div class="card-custom__image">
-                                <img src="assets/img/roland_emmerich_P-A.webp" alt="Roland Emmerich">
-                            </div>
-                            <div class="card-custom__content">
-                                <p class="card-custom__title">Roland Emmerich : Réalisateur visionnaire ou prophète des
-                                    désastres ?
-                                </p>
-                            </div>
-                        </a>
+                        <div class="card-custom__image">
+                            <img src="assets/img/roland_emmerich_P-A.webp" alt="Roland Emmerich">
+                        </div>
+                        <div class="card-custom__content">
+                            <h2 class="card-custom__title">Roland Emmerich</h2>
+                            <hr class="card-custom__separator">
+                            <p class="card-custom__text">Visionnaire ou prophète des désastres ?</p>
+                        </div>
                     </article>
-                </div>
-            </aside>
-           
+                </a>
+            </div>
         </main>
         <footer class=" footer">
             <section class="menu__footer">
@@ -283,7 +273,7 @@
 <script>
     const handleScroll = () => {
         const header = document.querySelector('.header')
-        if (window.scrollY > 50) {
+        if (window.scrollY > 285) {
             header.classList.add('gradient')
         } else {
             header.classList.remove('gradient')
