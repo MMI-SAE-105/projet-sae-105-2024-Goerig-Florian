@@ -8,7 +8,8 @@
     <script type="module" src="/src/js/script.js"></script>
     <link rel="icon" href="/assets/icons/LOGO.svg" type="image/svg+xml">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-    <title>Frise chronlogique</title>
+
+    <title>filmographie</title>
 </head>
 
 <body>
@@ -49,39 +50,34 @@
         </nav>
     </header>
     <main>
-        <div class="timeline">
-            <div class="timeline__title">
-                <h1>Frise Chronologique</h1>
-            </div>
-            <img src="/assets/img/frise_entiere.webp" alt="Frise chronologique" class="timeline__background">
-            <div class="timeline__event timeline__event--left">
-                <p><strong>1891 :</strong><br>
-                    <strong>Première plateforme offshore en eau douce (Lac St. Mary’s, Ohio).</strong></p>
-            </div>
-            <div class="timeline__event timeline__event--right">
-                <p><strong>1930 :</strong><br>
-                    Premières plateformes en eaux peu profondes dans le Golfe du Mexique.</p>
-            </div>
-            <div class="timeline__event timeline__event--left">
-                <p><strong>1947 :</strong><br>
-                    Première plateforme offshore hors de vue des côtes (Golfe du Mexique).</p>
-            </div>
-            <div class="timeline__event timeline__event--right">
-                <p><strong>1960 :</strong><br>
-                    Développement des plateformes fixes pour les eaux peu profondes.</p>
-            </div>
-            <div class="timeline__event timeline__event--left">
-                <p><strong>1980 :</strong><br>
-                    Apparition des plateformes TLP (Tension Leg Platforms).</p>
-            </div>
-            <div class="timeline__event timeline__event--right">
-                <p><strong>2000 :</strong><br>
-                    Innovations pour l’exploitation en eaux ultra-profondes.</p>
-            </div>
+        <section class="section">
+            <section class="page__section ">
+                <h1 class="card__title">
+                    <a class="card__title-link">Filmographie</a>
+                </h1>
+                <img class="page__image page__image--welcome" src="/assets/img/filmographie.webp"
+                    alt="image futuriste d'une personne de dos visionnant trois écran en lévitation">
+            </section>
+            <br>
+
+<aside class="custom-aside">
+    <div class="aside__content">
+        <img class="aside__image" src="/assets/img/soldier.webp" alt="Description de l'image">
+        <div class="aside__text">
+            <p class="aside__text--main">29 juillet 1992 en salle | 1h 44min | Action, Science Fiction <br>
+            De Roland Emmerich | Par Richard Rothstein, Dean Devlin <br>
+            Avec Jean-Claude Van Damme, Dolph Lundgren, Ally Walker.
+        </p>
         </div>
+    </div>
+    <p class="aside__text--secondary">Des soldats morts sont ramenés à la vie en tant que super-soldats, mais l'un d'eux recouvre sa mémoire et de se rebeller.</p>
+</aside>
+
 
     </main>
-    <footer class="footer">
+
+    </article>
+    <footer class=" footer">
         <section class="menu__footer">
             <div class="footer__left">
                 <nav class="footer__nav">
@@ -101,9 +97,8 @@
                 MMI 1 B1<br>
                 <a href="mailto:florian_goerig@hotmail.fr">florian_goerig@hotmail.fr</a>
             </p>
-            <hr class="separator">
-
         </section>
+        <hr class="separator">
         <section class="footer__socials">
             <ul class="footer__list list-unstyled">
                 <li><a href="https://www.iut-nfc.univ-fcomte.fr/b-u-t-metiers-du-multimedia-et-de-linternet/"><img
@@ -126,19 +121,17 @@
 
         <section class="footer__legal">
             <h4 class="footer__legal-title">Mentions légales </h4>
-            <p class="footer__legal-text">Ce site est un projet réalisé dans le cadre d’un exercice pédagogique au
+            <p class="footer__legal-text">Ce site est un projet réalisé dans le cadre d’un exercice
+                pédagogique au
                 département MMI Montbéliard (25)
             </p>
         </section>
     </footer>
 </body>
-
-</html>
-</body>
 <script>
     const handleScroll = () => {
         const header = document.querySelector('.header')
-        if (window.scrollY > 0) {
+        if (window.scrollY > 285) {
             header.classList.add('gradient')
         } else {
             header.classList.remove('gradient')

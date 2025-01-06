@@ -7,6 +7,7 @@ dialog#lightbox {
     border-color: none;
     border-width: 0px;
     background: var(--dgrad, linear-gradient(180deg, #623FA1 0%, #757362 50%, #0044A5 100%));
+    
 }
         position: absolute;
         top: -30 px;
@@ -15,7 +16,7 @@ dialog#lightbox {
         width: 20px;
         height: 20px;
         border-radius: 10px;
-        border: 10px solid #000;
+        
 
     }
 

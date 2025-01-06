@@ -40,6 +40,12 @@
                 <li class="menu__item">
                     <a class="menu__link" href="/fr/plateforme.html">La faim du pétrole</a>
                 </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="/fr/roland_emmerich.html">Roland Emmerich</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="/fr/filmographie.html">Filmographie</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -51,7 +57,7 @@
                         <a class="card__title-link">La faim du pétrole</a>
                     </h1>
                     <img class="page__image page__image--welcome" src="/assets/img/faim_petrole.webp"
-                        alt="Immage de la page de couverture du livre la faim du pétrole" />
+                        alt="Immage de la page de couverture du livre la faim du pétrole" loading="lazy">
                 </section>
                 <br>
                 <section class="page__text">
@@ -198,7 +204,7 @@
                     <a href="/fr/deepwater.html" class="card-custom-link">
                         <article class="card-custom">
                             <div class="card-custom__image">
-                                <img src="/assets/img/deepwater_page_accueil.webp" alt="Deepwater">
+                                <img src="/assets/img/deepwater_page_accueil.webp" alt="Deepwater" loading="lazy">
                             </div>
                             <div class="card-custom__content">
                                 <h2 class="card-custom__title">Deepwater</h2>
@@ -207,12 +213,12 @@
                             </div>
                         </article>
                     </a>
-
+                    <div class="cards-separator"></div>
                     <!-- Deuxième carte -->
                     <a href="/fr/plateforme.html" class="card-custom-link">
                         <article class="card-custom">
                             <div class="card-custom__image">
-                                <img src="/assets/img/plateforme.webp" alt="Plateforme Pétrolière">
+                                <img src="/assets/img/plateforme.webp" alt="Plateforme Pétrolière" loading="lazy">
                             </div>
                             <div class="card-custom__content">
                                 <h2 class="card-custom__title">plateforme Pétrolière</h2>
@@ -223,6 +229,7 @@
                     </a>
                 </div>
         </main>
+        <br>
         <footer class=" footer">
             <section class="menu__footer">
                 <div class="footer__left">
@@ -272,11 +279,19 @@
                     département MMI Montbéliard (25)
                 </p>
             </section>
-
-            <section>
-
-            </section>
         </footer>
 </body>
+<script>
+    const handleScroll = () => {
+        const header = document.querySelector('.header')
+        if (window.scrollY > 285) {
+            header.classList.add('gradient')
+        } else {
+            header.classList.remove('gradient')
+        }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+</script>
 
 </html>

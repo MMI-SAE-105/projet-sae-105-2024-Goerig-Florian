@@ -46,7 +46,7 @@
 
     }
 
-    /* Exemple de police futuriste */
+    
 }
 
 .card__caption {
@@ -87,7 +87,6 @@
 }
 
 
-
 .card {
     width: 100%;
 
@@ -96,7 +95,6 @@
     overflow: hidden;
     position: relative;
     padding: 20px;
-
 
 }
 
@@ -113,75 +111,52 @@
 .card p {
     text-align: justify;
     font-family: 'Orbitron', serif;
+
     ,
 }
 
-/* Conteneur principal pour aligner les deux cartes */
-
 .cards-container-custom {
     display: flex;
-    /* Met les cartes côte à côte */
     justify-content: space-between;
-    /* Espace uniforme entre les cartes */
     align-items: stretch;
-    /* Force les cartes à avoir la même hauteur */
-    gap: 30px;
+    /* Aligne les cartes verticalement */
+    gap: 20px;
     /* Espacement horizontal entre les cartes */
-    background-color: #ffffff;
-    /* Fond blanc */
+    background-color: #1b3665;
+    /* Fond bleu */
     border-radius: 10px;
-    /* Coins arrondis pour le conteneur */
+    /* Coins arrondis */
     width: 90%;
     max-width: 1200px;
-    /* Largeur maximale */
-    margin: 20px auto;
-    /* Marge autour du conteneur */
+    margin: 10px auto;
     padding: 20px;
-    /* Espacement intérieur du conteneur */
     box-sizing: border-box;
-    /* Inclut le padding et la bordure dans la largeur totale */
-    
+    /* Inclut le padding dans la largeur totale */
 }
 
-/* Styles des cartes individuelles */
-
+/* Style des cartes individuelles */
 .card-custom {
     flex: 1;
     /* Les cartes occupent une largeur égale */
     display: flex;
     flex-direction: column;
-    /* Contenu organisé verticalement */
+    /* Organise le contenu verticalement */
     justify-content: space-between;
-    /* Équilibre le contenu verticalement */
+    /* Équilibre les éléments verticalement */
     background-color: #1b3665;
     /* Fond bleu */
     border-radius: 10px;
     /* Coins arrondis */
     overflow: hidden;
-    /* Masque tout débordement */
+    /* Supprime tout débordement */
     text-align: center;
+    /* Centre le texte */
     color: #ffffff;
     /* Texte blanc */
-    height: 300px;
-    /* Réduit la hauteur totale pour des cartes plus carrées */
     box-sizing: border-box;
-    /* Inclut le padding dans la hauteur totale */
 }
 
-/* Images dans les cartes */
-.card-custom__image img {
-    width: 100%;
-    /* Les images occupent toute la largeur */
-    height: auto;
-    /* Gardent leurs proportions */
-    max-height: 150px;
-    /* Limite la hauteur maximale des images */
-    object-fit: cover;
-    /* Coupe les images si elles dépassent */
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
+/* Titre des cartes */
 .card-custom__title {
     font-size: 16px;
     font-weight: bold;
@@ -189,56 +164,165 @@
     color: #ffffff;
     font-family: 'Orbitron', sans-serif;
     /* Police futuriste */
-    margin-bottom: 5px;
-    /* Réduit l'espacement sous le titre */
+    margin: 10px 0;
+    /* Espacement autour du titre */
+    text-align: center;
 }
 
+/* Conteneur interne des cartes */
+.card-custom__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Assure une répartition verticale uniforme */
+    flex-grow: 1;
+    align-items: center;
+    /* Centre les éléments horizontalement */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Séparateur horizontal sous le titre */
+.card-custom__separator {
+    border: none;
+    border-top: 2px solid #ffffff;
+    /* Ligne blanche */
+    width: 80%;
+    /* Largeur de la ligne */
+    margin: 0 auto;
+    height: 0;
+    /* S'assure que la ligne ne prend pas de hauteur */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    /* Nécessaire pour uniformiser le positionnement */
+    top: 0;
+    /* Supprime tout décalage vertical */
+}
+
+/* Images dans les cartes */
+.card-custom__image img {
+    width: 100%;
+    height: 150px;
+    /* Fixe une hauteur identique pour toutes les images */
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+/* Texte descriptif des cartes */
 .card-custom__text {
     font-size: 14px;
     line-height: 1.4;
-    /* Réduit l'espacement vertical dans le texte */
-   margin: 0; ;
-    /* Réduit l'espacement entre le texte et le bas de la carte */
+    /* Espacement vertical dans le texte */
+    margin: 10px 0;
+    /* Espacement autour du texte */
+    text-align: center;
+    /* Centre le texte */
     font-family: 'Orbitron', sans-serif;
-    
+    /* Police futuriste */
+    flex-grow: 0;
+}
+.card-custom__text a {
+    text-decoration: none;
+    color: inherit;
 }
 
-.card-custom__content {
-    flex-grow: 1;
-    /* Permet au contenu de s'adapter à l'espace disponible */
-   padding: 5px;
+.card-custom__text a:hover {
+    text-decoration: underline;
+    /* Facultatif */
+    color: #ffffff;
+    /* Facultatif */
+}
+
+.card-custom__link {
+    border: 10 px   solid #ffffff;
+}
+
+.cards-separator {
+    width: 2px;
+    /* Largeur de la barre */
+    background-color: #ffffff;
+    /* Couleur blanche */
+    margin: 0;
+    /* Pas d'espacement supplémentaire */
+}
+/* Carte principale pour la filmographie */
+.card-films {
     background-color: #1b3665;
     /* Fond bleu */
-    display: flex;
-    flex-direction: column;
+    border-radius: 10px;
+    /* Coins arrondis */
+    padding: 20px;
+    /* Espacement intérieur */
+    text-align: center;
+    /* Centre le contenu */
+    color: #ffffff;
+    /* Texte blanc */
+    font-family: 'Orbitron', sans-serif;
+    /* Police futuriste */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Ombre légère */
+    max-width: 900px;
+    /* Largeur maximale de la carte */
+    margin: 20px;
+
+    /* Centre la carte horizontalement */
+    box-sizing: border-box;
+    /* Inclut le padding et la bordure dans la largeur totale */
     
-    /* Équilibre le titre et le texte */
-    margin: 0;
 }
 
-/* Lien enveloppant toute la carte */
-.card-custom-link {
-    display: block;
-    /* Transforme le lien en bloc */
-    width: 100%;
-    /* S'assure que le lien occupe toute la largeur de la carte */
-    height: 100%;
-    /* Le lien occupe toute la hauteur de la carte */
-    text-decoration: none;
-    /* Supprime le soulignement */
-    color: inherit;
-    /* Hérite de la couleur du texte */
+/* Titre de la carte */
+.card-films__title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 10px;
+    /* Espacement sous le titre */
+    color: #ffffff;
+    margin-bottom: 20px;
+    margin-top: 0;
 }
-/* Style personnalisé pour les séparateurs dans les cartes */
-.card-custom__separator {
-    border: none;
-    /* Supprime la bordure par défaut */
-    border-top: 2px solid #ffffff;
-    /* Ajoute une ligne blanche */
-    margin: 10px 0;
-    /* Espacement vertical autour de la ligne */
-    width: 80%;
-    /* Réduit la largeur à 80% du conteneur */
-    align-self: center;
-    /* Centre la ligne horizontalement */
+
+/* Conteneur des images */
+.card-films__images {
+    display: flex;
+    justify-content: space-between;
+    /* Espace égal entre les images */
+    flex-wrap: wrap;
+    /* Permet aux images de passer à la ligne si besoin */
+    gap: 10px;
+    /* Espacement entre les images */
+    margin-bottom: 20px;
+    /* Espacement sous les images */
 }
+
+/* Images dans la carte */
+.card-films__image {
+    width: calc(33.33% - 10px);
+    /* Chaque image occupe un tiers de l'espace moins l'espacement */
+    max-width: 200px;
+    /* Largeur maximale */
+    height: auto;
+    /* Conserve les proportions */
+    border-radius: 5px;
+    /* Coins arrondis */
+    object-fit: cover;
+    /* Coupe les images si elles dépassent */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Ombre légère */
+}
+
+/* Texte sous les images */
+.card-films__text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ffffff;
+    /* Texte blanc */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #ffffff;
+    padding: 5px;
+    /* Espacement au-dessus du texte */
+}
+

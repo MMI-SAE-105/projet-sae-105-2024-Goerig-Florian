@@ -1,0 +1,68 @@
+.custom-aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centre horizontalement le contenu */
+    padding: 20px;
+    background-color: #f5f5f5;
+    /* Fond clair pour distinguer l'aside */
+    border-radius: 10px;
+    /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Ombre douce */
+    margin: 20px auto;
+    /* Centre horizontalement l'aside */
+    max-width: 600px;
+    /* Largeur maximale */
+    text-align: left;
+}
+
+.aside__content {
+    display: flex;
+    /* Place l'image et le texte côte à côte */
+    gap: 20px;
+    /* Espacement entre l'image et le texte */
+    align-items: stretch;
+    /* Étend l'image et le texte à la même hauteur */
+    width: 100%;
+}
+
+.aside__image {
+    width: 150px;
+    /* Largeur fixe de l'image */
+    height: auto;
+    /* Conserve les proportions */
+    border-radius: 10px;
+    /* Coins arrondis pour l'image */
+    object-fit: cover;
+    /* Coupe si nécessaire pour conserver les proportions */
+    flex-shrink: 0;
+    /* Empêche l'image de rétrécir */
+    align-self: stretch;
+    /* Assure que l'image s'étend pour correspondre à la hauteur */
+}
+
+.aside__text {
+    flex-grow: 1;
+    /* Permet au texte de prendre l'espace restant */
+    
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Merriweather', serif;
+    
+    /* Centre verticalement le texte */
+}
+
+.aside__text--main {
+    font-size: 14px;
+    margin-top: 0;
+    /* Supprime l'espacement sous le texte principal */
+    line-height: 1.2;
+    /* Réduit l'espacement vertical du texte */
+}
+
+.aside__text--secondary {
+    font-size: 14px;    
+    font-family: 'Merriweather', serif;
+    /* Couleur plus claire pour le texte secondaire */
+}

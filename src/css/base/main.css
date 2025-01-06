@@ -43,6 +43,17 @@ p {
     text-decoration: none;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+    /* Facultatif */
+    color: #ffffff;
+    /* Facultatif */
+}
 button,
 input,
 select,

@@ -40,6 +40,12 @@
                 <li class="menu__item">
                     <a class="menu__link" href="/fr/faim_petrole.html">La faim du pétrole</a>
                 </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="/fr/roland_emmerich.html">Roland Emmerich</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="/fr/filmographie.html">Filmographie</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -193,10 +199,10 @@
             <br>
             <div class="cards-container-custom">
                 <!-- Première carte -->
-                <a href="roland_emmerich.html" class="card-custom-link">
+                <a href="\fr\roland_emmerich.html" class="card-custom-link">
                     <article class="card-custom">
                         <div class="card-custom__image">
-                            <img src="/assets/img/roland_emmerich_P-A.webp" alt="Roland Emmerich">
+                            <img src="/assets/img/roland_emmerich_P-A.webp" alt="Roland Emmerich" loading="lazy">
                         </div>
                         <div class="card-custom__content">
                             <h2 class="card-custom__title">Roland Emmerich</h2>
@@ -205,12 +211,13 @@
                         </div>
                     </article>
                 </a>
-
+                <div class="cards-separator"></div>
                 <!-- Deuxième carte -->
                 <a href="/fr/faim_petrole.html" class="card-custom-link">
                     <article class="card-custom">
                         <div class="card-custom__image">
-                            <img src="/assets/img/faim_petrole.webp" alt="Roland Emmerich">
+                            <img src="/assets/img/faim_petrole.webp" alt="image livre la faim du pétrole"
+                                loading="lazy">
                         </div>
                         <div class="card-custom__content">
                             <h2 class="card-custom__title">La faim du pétrole</h2>
@@ -273,5 +280,17 @@
                 </section>
             </footer>
 </body>
+<script>
+    const handleScroll = () => {
+        const header = document.querySelector('.header')
+        if (window.scrollY > 285) {
+            header.classList.add('gradient')
+        } else {
+            header.classList.remove('gradient')
+        }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+</script>
 
 </html>
