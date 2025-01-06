@@ -197,7 +197,7 @@
     font-size: 14px;
     line-height: 1.4;
     /* Réduit l'espacement vertical dans le texte */
-   margin: 10px 5px;
+   margin: 0; ;
     /* Réduit l'espacement entre le texte et le bas de la carte */
     font-family: 'Orbitron', sans-serif;
     
@@ -211,9 +211,9 @@
     /* Fond bleu */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    /* Équilibre le titre et le texte */
     
+    /* Équilibre le titre et le texte */
+    margin: 0;
 }
 
 /* Lien enveloppant toute la carte */

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <script type="module" src="/src/js/script.js"></script>
+    <link rel="icon" href="/assets/icons/LOGO.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <title>Roland Emmerich</title>
+</head>
+<body>
+    <header class="header">
+        <a class="header__logo-link" href="/fr/index.html">
+            <img class="header__logo" src="/assets/icons/mini_logo_header.svg" alt="Logo " />
+        </a>
+        <nav class="header_droite">
+            <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav">
+                <span class="menu-btn__bar" aria-hidden="true"></span>
+            </button>
+        </nav>
+        <nav class="header__menu menu" id="mainNav" aria-hidden="true">
+            <div class="menu__langue">
+                <span>FR</span> / <span>EN</span>
+            </div>
+    
+            <ul class="menu__list list-unstyled">
+                <li class="menu__item">
+                    <a class="menu__link" href="/fr/plateforme.html">plateforme pétrolière</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="/fr/frise.html">Frise chronologique</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="/fr/deepwater.html">DeepWater Horizon</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="/fr/faim_petrole.html">La faim du pétrole</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+            </section>
+            <section class="footer__socials">
+                <ul class="footer__list list-unstyled">
+                    <li><a href="https://www.iut-nfc.univ-fcomte.fr/b-u-t-metiers-du-multimedia-et-de-linternet/"><img
+                                src="/assets/icons/mmi_white.svg" alt="Logo MMI"></a></li>
+                    <li><a href="https://www.tiktok.com/@mmi_montbeliard"><img src="/assets/icons/TikTok_white.svg"
+                                alt="Tiktok"></a>
+            
+                    <li><a href="https://www.linkedin.com/school/mmimontbeliard/posts/?feedView=all"><img
+                                src="/assets/icons/LinkedIn_white.svg" alt="Linkedin"></a></li>
+                    <li><a href="https://www.facebook.com/mmimontbeliard/?locale=fr_FR"><img src="/assets/icons/Faebook_white.svg"
+                                alt="Facebook"></a></li>
+                    <li><a
+                            href="https://www.instagram.com/mmi_montbeliard?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img
+                                src="/assets/icons/Instagram_white.svg" alt="Instagram"></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCgW7jR8McJwjxPh0fDQaXGg/videos"><img
+                                src="/assets/icons/Youtube_white.svg" alt="Youtube"></a></li>
+                </ul>
+            </section>
+            <hr class="separator">
+            
+            <section class="footer__legal">
+                <h4 class="footer__legal-title">Mentions légales </h4>
+                <p class="footer__legal-text">Ce site est un projet réalisé dans le cadre d’un exercice pédagogique au
+                    département MMI Montbéliard (25)
+                </p>
+            </section>
+            </footer>
+            </body>
+            <script>
+                const handleScroll = () => {
+                    const header = document.querySelector('.header')
+                    if (window.scrollY > 50) {
+                        header.classList.add('gradient')
+                    } else {
+                        header.classList.remove('gradient')
+                    }
+                }
+
+                window.addEventListener('scroll', handleScroll)
+            </script>
+</html>
