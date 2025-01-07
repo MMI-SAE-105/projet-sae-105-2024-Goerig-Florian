@@ -11,6 +11,8 @@
     transition: all 0.3s ease-in-out;
     font-family: 'Merriweather', sans-serif;
     background: var(--dgrad, linear-gradient(180deg, #623FA1 0%, #757362 50%, #0044A5 100%));
+    overflow-y: auto;
+
 }
 
 .menu[aria-hidden="false"] {
@@ -48,7 +50,7 @@
     gap: var(--space2x);
     justify-content: center;
     margin-bottom: var(--space3x);
-    align-items:  center;
+    align-items: center;
     gap: var(--space4x);
     display: inline-block;
     padding-left: 10px;
@@ -62,8 +64,7 @@
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    border : none
-   
+    border: none
 }
 
 .menu-btn__bar,
@@ -78,7 +79,7 @@
     left: 0;
     z-index: 10;
     transition: all 0.4s ease-in-out;
-    
+
 }
 
 .menu-btn__bar::before {
@@ -109,14 +110,14 @@ Ne pas oublier d'ajouter une transition plus haut pour l'animation */
     display: inline;
     margin: 0;
     font-size: 18px;
-   
+
 }
 
 .menu__langue a {
     text-decoration: none;
     color: inherit;
     font-size: 20px;
-    
+
 }
 
 .header__menu.menu {
