@@ -37,8 +37,6 @@ border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
 
-    
-
 
 
 .card__title {
@@ -199,6 +197,7 @@ border-top-left-radius: 15px;
     align-items: center;
     /* Centre les éléments horizontalement */
     padding: 10px;
+    
     box-sizing: border-box;
 }
 

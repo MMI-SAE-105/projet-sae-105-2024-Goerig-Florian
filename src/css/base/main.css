@@ -112,6 +112,11 @@ textarea {
     margin-right: auto;
 }
 
+.page__figure-caption{
+    font-size: 12px;
+    font-style: italic;
+}
+
 .image__duotone {
     position: relative;
     background-color: #6600A5;
@@ -155,3 +160,4 @@ textarea {
     margin-left: 20px;
     margin-right: 20px;
 }
+
