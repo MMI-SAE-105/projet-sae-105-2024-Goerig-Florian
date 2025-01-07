@@ -1,63 +1,139 @@
-/**
-* Lightbox
-*/
-
+/* Lightbox */
 dialog#lightbox {
-    border-radius: 15px;
-    border-color: none;
-    border-width: 0px;
-    background: var(--dgrad, linear-gradient(180deg, #623FA1 0%, #757362 50%, #0044A5 100%));
-    
+    width: 100vw;
+    /* Prend toute la largeur de l'écran */
+    height: 100vh;
+    /* Prend toute la hauteur de l'écran */
+    margin: 0;
+    /* Supprime les marges */
+    padding: 0;
+    /* Supprime le padding */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fond sombre pour l'effet lightbox */
+    display: flex;
+    /* Utilise flex pour centrer le contenu */
+    align-items: center;
+    /* Centre verticalement l'image */
+    justify-content: center;
+    /* Centre horizontalement l'image */
+    overflow: hidden;
+    /* Empêche le débordement */
+    animation: fadeIn 0.3s ease-in-out;
+    /* Animation d'ouverture */
+    border: none;
+    /* Supprime toute bordure */
+    outline: none;
+    /* Supprime le contour par défaut */
 }
-        position: absolute;
-        top: -30 px;
-        right: -30 px;
-       
-        width: 20px;
-        height: 20px;
-        border-radius: 10px;
-        
 
-    }
-
-dialog#lightbox[open] {
-    animation: entree 1s;
+/* Image dans la lightbox */
+dialog#lightbox img {
+    width: 100%;
+    /* L'image occupe toute la largeur de l'écran */
+    height: auto;
+    /* Garde les proportions */
+    object-fit: contain;
+    /* Adapte l'image à la lightbox sans la déformer */
+    border-radius: 0;
+    /* Supprime tout arrondi éventuel */
+    display: block;
+    /* Supprime les marges automatiques autour de l'image */
 }
 
-@keyframes entree {
-    0% {
-        transform: scale(0.5);
+/* Animation d'ouverture */
+@keyframes fadeIn {
+    from {
         opacity: 0;
     }
 
-
-    70% {
-        transform: scale(1);
-    }
-
-    100% {
-        transform: scale(1);
+    to {
+        opacity: 1;
     }
 }
 
-        
+/* Animation de fermeture */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
 
-dialog#lightbox[open].sortie {
- animation: sortie 1s;
- }
- @keyframes sortie {
-  0% {
- opacity: 1;
-  }
-        
- 100% {
- opacity: 0;
- }
+    to {
+        opacity: 0;
+    }
 }
+
+/* Fermeture de la lightbox */
+dialog#lightbox.sortie {
+    animation: fadeOut 0.3s ease-in-out;
+    /* Animation de sortie */
+    pointer-events: none;
+    /* Empêche les interactions pendant l'animation */
+}
+
+/* Ombre autour de la lightbox */
+dialog#lightbox[open]::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fond sombre semi-transparent */
+    backdrop-filter: blur(5px);
+    /* Ajoute un effet de flou au fond */
+}
+
+/* Style des miniatures */
 .mini__article {
     max-width: 50%;
-    margin: 20px;
+    /* Taille maximale pour les miniatures */
+    margin: 20px auto;
+    /* Centre les miniatures */
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    /* Force un comportement de bloc */
+    cursor: pointer;
+    /* Change le curseur pour indiquer un clic */
+}
+
+/* Bouton de fermeture */
+dialog#lightbox button.close {
+    position: absolute;
+    top: 10px;
+    /* Positionné en haut */
+    right: 10px;
+    /* Positionné à droite */
+    width: 30px;
+    /* Largeur du bouton */
+    height: 30px;
+    /* Hauteur du bouton */
+    border: none;
+    /* Supprime toute bordure */
+    background: rgba(255, 255, 255, 0.8);
+    /* Fond légèrement transparent */
+    border-radius: 50%;
+    /* Forme circulaire */
+    font-size: 18px;
+    /* Taille du texte ou icône */
+    color: #000;
+    /* Couleur de l'icône ou texte */
+    cursor: pointer;
+    /* Change le curseur au survol */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    /* Ajoute une ombre */
+    transition: background 0.3s ease;
+    /* Animation au survol */
+}
+
+/* Bouton de fermeture au survol */
+dialog#lightbox button.close:hover {
+    background: rgba(255, 255, 255, 1);
+    /* Fond complètement opaque */
+}
+
+/* Bouton de fermeture actif */
+dialog#lightbox button.close:active {
+    transform: scale(0.9);
+    /* Réduction légère pour un effet de clic */
+}
+dialog#lightbox:not([open]) {
+    display: none;
+    /* Cache la lightbox lorsqu'elle n'est pas ouverte */
 }
