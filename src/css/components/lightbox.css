@@ -1,43 +1,52 @@
-/* Lightbox */
+/* Lightbox spécifique */
 dialog#lightbox {
+    all: unset;
+    /* Réinitialise les styles natifs */
+    position: fixed;
+    /* Fixe la lightbox sur toute la fenêtre */
+    top: 0;
+    left: 0;
     width: 100vw;
-    /* Prend toute la largeur de l'écran */
+    /* Prend toute la largeur de la fenêtre */
     height: 100vh;
-    /* Prend toute la hauteur de l'écran */
-    margin: 0;
-    /* Supprime les marges */
-    padding: 0;
-    /* Supprime le padding */
-    background-color: rgba(0, 0, 0, 0.8);
-    /* Fond sombre pour l'effet lightbox */
+    /* Prend toute la hauteur de la fenêtre */
     display: flex;
-    /* Utilise flex pour centrer le contenu */
-    align-items: center;
-    /* Centre verticalement l'image */
     justify-content: center;
-    /* Centre horizontalement l'image */
+    /* Centre horizontalement */
+    align-items: center;
+    /* Centre verticalement */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fond sombre */
     overflow: hidden;
     /* Empêche le débordement */
-    animation: fadeIn 0.3s ease-in-out;
-    /* Animation d'ouverture */
-    border: none;
-    /* Supprime toute bordure */
-    outline: none;
-    /* Supprime le contour par défaut */
+    z-index: 9999;
+    /* Toujours au premier plan */
 }
 
-/* Image dans la lightbox */
+/* Images dans la lightbox */
 dialog#lightbox img {
+    box-sizing: content-box;
+    /* Évite le box-sizing global */
     width: 100%;
-    /* L'image occupe toute la largeur de l'écran */
+    /* Adapte l'image à la largeur */
     height: auto;
     /* Garde les proportions */
     object-fit: contain;
-    /* Adapte l'image à la lightbox sans la déformer */
-    border-radius: 0;
-    /* Supprime tout arrondi éventuel */
+    /* Ajuste l'image sans la couper */
     display: block;
-    /* Supprime les marges automatiques autour de l'image */
+    /* Supprime les marges autour de l'image */
+    filter: none;
+    /* Supprime tout filtre dans la lightbox */
+    mix-blend-mode: normal;
+    /* Désactive tout mélange de couleur */
+}
+
+/* Ombre et flou en arrière-plan */
+dialog#lightbox[open]::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fond sombre semi-transparent */
+    backdrop-filter: blur(5px);
+    /* Effet de flou */
 }
 
 /* Animation d'ouverture */
@@ -70,13 +79,7 @@ dialog#lightbox.sortie {
     /* Empêche les interactions pendant l'animation */
 }
 
-/* Ombre autour de la lightbox */
-dialog#lightbox[open]::backdrop {
-    background-color: rgba(0, 0, 0, 0.8);
-    /* Fond sombre semi-transparent */
-    backdrop-filter: blur(5px);
-    /* Ajoute un effet de flou au fond */
-}
+
 
 /* Style des miniatures */
 .mini__article {

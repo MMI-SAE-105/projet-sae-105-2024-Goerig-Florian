@@ -12,12 +12,12 @@
     inset: 0;
     /* Raccourci pour top: 0; right: 0; bottom: 0; left: 0 */
     z-index: 1;
-    background-color: #D7E9FF
+    background-color: #002149;
     /* Couleur semi-transparente */
     mix-blend-mode: lighten;
     /* Mélange pour éclaircir */
     border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 .card__duotone img {
@@ -33,7 +33,7 @@
     /* Conserve les proportions */
     object-fit: cover;
     /* Remplit le conteneur tout en maintenant les proportions */
-border-top-left-radius: 15px;
+    border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
 
@@ -62,7 +62,7 @@ border-top-left-radius: 15px;
 
     }
 
-    
+
 }
 
 .card__caption {
@@ -231,7 +231,7 @@ border-top-left-radius: 15px;
     position: absolute;
     inset: 0;
     /* Couvre tout le conteneur */
-    background-color: #D7E9FF
+    background-color: rgba(255, 255, 255, 0.2);
     /* Semi-transparence */
     z-index: 0;
     /* Assure qu'il est sous l'image */
@@ -240,6 +240,7 @@ border-top-left-radius: 15px;
     pointer-events: none;
     /* Empêche l'interaction avec le pseudo-élément */
 }
+
 
 /* Uniformiser les traits horizontaux */
 .card-custom__separator {
@@ -312,12 +313,13 @@ border-top-left-radius: 15px;
     font-family: 'Orbitron', sans-serif;
     /* Police futuriste */
     flex-grow: 0;
-    
+
 }
+
 .card-custom__text a {
     text-decoration: none;
     color: inherit;
-        
+
 }
 
 .card-custom__text a:hover {
@@ -328,7 +330,7 @@ border-top-left-radius: 15px;
 }
 
 .card-custom__link {
-    border: 10 px   solid #ffffff;
+    border: 10 px solid #ffffff;
 }
 
 .cards-separator {
@@ -339,6 +341,7 @@ border-top-left-radius: 15px;
     margin: 0;
     /* Pas d'espacement supplémentaire */
 }
+
 /* Carte principale pour la filmographie */
 .card-films {
     background-color: #1b3665;
@@ -362,7 +365,7 @@ border-top-left-radius: 15px;
     /* Centre la carte horizontalement */
     box-sizing: border-box;
     /* Inclut le padding et la bordure dans la largeur totale */
-    
+
 }
 
 /* Titre de la carte */
@@ -418,4 +421,3 @@ border-top-left-radius: 15px;
     padding: 5px;
     /* Espacement au-dessus du texte */
 }
-

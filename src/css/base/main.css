@@ -1,8 +1,48 @@
+/* Style global pour tout */
 *,
 *::before,
 *::after {
-    
+    box-sizing: border-box;
+}
 
+/* Photo d'accueil avec filtre */
+.image__duotone {
+    position: relative;
+    background-color: #6600A5;
+    /* Couleur de fond */
+    overflow: hidden;
+    /* Empêche le débordement */
+}
+
+.image__duotone::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* Assure que l'effet couvre toute l'image */
+    z-index: 1;
+    background-color: #002149;
+    /* Couleur semi-transparente */
+    mix-blend-mode: lighten;
+    /* Mélange pour éclaircir */
+}
+
+.image__duotone img {
+    filter: grayscale(50%);
+    mix-blend-mode: multiply;
+    /* Conserve l'effet duotone */
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* Adapte l'image sans déformer */
+    z-index: 0;
+    /* Place l'image sous l'effet */
+    position: relative;
+}
+
+ghtbox */
+
+}
 body {
     line-height: 1.6;
     background-color: var(--white);
@@ -116,36 +156,7 @@ textarea {
     font-style: italic;
 }
 
-.image__duotone {
-    position: relative;
-    background-color: #6600A5;
-    /* Couleur de fond */
-    overflow: hidden;
-    /* Assure que rien ne déborde */
-}
 
-.image__duotone::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    background-color: #0044A5
-        /* Couleur semi-transparente */
-        mix-blend-mode: lighten;
-    /* Mélange pour éclaircir */
-}
-
-.image__duotone img {
-    filter: grayscale(50%);
-    mix-blend-mode: multiply;
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    z-index: 0;
-    /* Assure que l'image reste sous l'effet */
-    position: relative;
-}
 
 .gradient {
     background: var(--dgrad-header, linear-gradient(90deg, #623FA1 -1.91%, #696275 50.94%, #0044A5 100%));
