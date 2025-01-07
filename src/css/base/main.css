@@ -23,26 +23,31 @@ h2 {
 h1 {
     font-size: 32px;
     font-weight: bold;
-    
+
 }
 
 h2 {
     font-size: var 32px;
-    
+    padding-left: 20px;
+    padding-right: 20px;
     font-weight: bold;
 }
 
-h3,
-{
-font-size: var 24px;
-font-family: 'merriweather', sans-serif;
-font-weight: normal;
-margin: 10px 10px;
+h3 {
+    font-size: 20px;
+    font-family: 'merriweather', sans-serif;
+    font-weight: normal;
+    padding-left: 20px;
+    padding-right: 20px;
+
+
 }
-}
+
 
 p {
     text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 a {
@@ -106,7 +111,7 @@ textarea {
     margin-left: auto;
     margin-right: auto;
 }
-   
+
 .image__duotone {
     position: relative;
     background-color: #6600A5;
@@ -121,8 +126,8 @@ textarea {
     inset: 0;
     z-index: 1;
     background-color: #0044A5
-    /* Couleur semi-transparente */
-    mix-blend-mode: lighten;
+        /* Couleur semi-transparente */
+        mix-blend-mode: lighten;
     /* Mélange pour éclaircir */
 }
 
@@ -138,17 +143,15 @@ textarea {
     position: relative;
 }
 
-    .gradient {
-        background: var(--dgrad-header, linear-gradient(90deg, #623FA1 -1.91%, #696275 50.94%, #0044A5 100%));
-        transition: all 0.3s ease-in-out;
-        width: 100%;
-    }
+.gradient {
+    background: var(--dgrad-header, linear-gradient(90deg, #623FA1 -1.91%, #696275 50.94%, #0044A5 100%));
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+}
 
-    .separator {
-        border: 2px solid #623FA1;
-        background: var(--violet, #623FA1);
-        box-shadow: 0px 0px 5px 0px #FFF;
-    }
-
-
-    
+.separator {
+    border: 1px solid #623FA1;
+    box-shadow: 0px 0px 5px 0px #FFF;
+    margin-left: 20px;
+    margin-right: 20px;
+}
