@@ -34,3 +34,8 @@
     max-width: 100%;
     z-index: 3;
 }
+
+.page__text h2 {
+    color : #0044A5;
+    font-weight: bold;
+}
