@@ -27,25 +27,23 @@ h1 {
 
 h2 {
     font-size: var 32px;
-    
+
     font-weight: bold;
 }
 
 h3 {
     font-size: 20px;
     font-family: 'merriweather', sans-serif;
-    
-    
-
-
 }
 
-
+p {
+    font-family: 'Merriweather', sans-serif;
+}
 a {
-    color: blue;
-    /* Couleur par défaut des liens */
+
+    color: -webkit-link;
+    cursor: pointer;
     text-decoration: underline;
-    /* Souligne les liens */
 }
 
 a:hover {
@@ -54,15 +52,15 @@ a:hover {
     color: #0056b3;
     /* Couleur légèrement différente */
     text-decoration: underline;
-        /* Facultatif */
-        color: #ffffff;
-        /* Facultatif */
+    /* Facultatif */
+    color: #623FA1;
+    /* Facultatif */
 }
 
 
 
 
-    
+
 
 button,
 input,
@@ -114,7 +112,7 @@ textarea {
     margin-right: auto;
 }
 
-.page__figure-caption{
+.page__figure-caption {
     font-size: 12px;
     font-style: italic;
 }
@@ -161,8 +159,4 @@ textarea {
     box-shadow: 0px 0px 5px 0px #FFF;
     margin-left: 20px;
     margin-right: 20px;
-}
-
-p {
-    
 }

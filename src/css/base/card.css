@@ -133,11 +133,11 @@ border-top-left-radius: 15px;
     ,
 }
 
+/* Conteneur principal pour les cartes */
 .cards-container-custom {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    /* Aligne les cartes verticalement */
     gap: 20px;
     /* Espacement horizontal entre les cartes */
     background-color: #1b3665;
@@ -149,7 +149,6 @@ border-top-left-radius: 15px;
     margin: 10px auto;
     padding: 20px;
     box-sizing: border-box;
-    /* Inclut le padding dans la largeur totale */
 }
 
 /* Style des cartes individuelles */
@@ -160,7 +159,6 @@ border-top-left-radius: 15px;
     flex-direction: column;
     /* Organise le contenu verticalement */
     justify-content: space-between;
-    /* Équilibre les éléments verticalement */
     background-color: #1b3665;
     /* Fond bleu */
     border-radius: 10px;
@@ -172,6 +170,13 @@ border-top-left-radius: 15px;
     color: #ffffff;
     /* Texte blanc */
     box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+    /* Animation au survol */
+}
+
+.card-custom:hover {
+    transform: scale(1.05);
+    /* Agrandissement léger au survol */
 }
 
 /* Titre des cartes */
@@ -188,76 +193,109 @@ border-top-left-radius: 15px;
 }
 
 /* Conteneur interne des cartes */
-.card-custom__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* Assure une répartition verticale uniforme */
-    flex-grow: 1;
-    align-items: center;
-    /* Centre les éléments horizontalement */
-    padding: 10px;
-    
-    box-sizing: border-box;
-}
-
-/* Séparateur horizontal sous le titre */
-.card-custom__separator {
-    border: none;
-    border-top: 2px solid #ffffff;
-    /* Ligne blanche */
-    width: 80%;
-    /* Largeur de la ligne */
-    margin: 0 auto;
-    height: 0;
-    /* S'assure que la ligne ne prend pas de hauteur */
-    margin-top: 10px;
-    margin-bottom: 10px;
-    position: relative;
-    /* Nécessaire pour uniformiser le positionnement */
-    top: 0;
-    /* Supprime tout décalage vertical */
-}
-
+/* Uniformiser les images tout en appliquant le filtre */
 .card-custom__image {
-    position: relative;
-    background-color: #6600A5;
-    /* Couleur de base pour le duotone */
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    height: 150px;
+    /* Hauteur fixe pour les images */
+    display: flex;
+    align-items: center;
+    /* Centre verticalement */
+    justify-content: center;
+    /* Centre horizontalement */
     overflow: hidden;
-    /* Assure que le contenu reste dans les bordures */
+    /* Empêche le débordement */
+    background-color: #6600A5;
+    /* Ajout d'un fond pour l'effet de filtre */
+    position: relative;
+    /* Nécessaire pour les pseudo-éléments */
+}
+
+.card-custom__image img {
+    width: 100%;
+    /* L'image occupe toute la largeur du conteneur */
+    height: 100%;
+    /* L'image occupe toute la hauteur */
+    object-fit: cover;
+    /* Maintient un ratio d'aspect approprié */
+    filter: grayscale(50%) brightness(80%);
+    /* Applique le filtre */
+    mix-blend-mode: multiply;
+    /* Mélange les couleurs */
+    z-index: 1;
+    /* Position de l'image au-dessus du fond */
 }
 
 .card-custom__image::before {
     content: "";
+    /* Superposition */
     position: absolute;
-    /* Remplit tout l'espace du conteneur */
-    z-index: 1;
-    background-color: #D7E9FF;
-    /* Couleur claire superposée */
+    inset: 0;
+    /* Couvre tout le conteneur */
+    background-color: #D7E9FF
+    /* Semi-transparence */
+    z-index: 0;
+    /* Assure qu'il est sous l'image */
     mix-blend-mode: lighten;
-    /* Mélange la couleur avec l'image pour l'effet duotone */
+    /* Mélange la lumière */
+    pointer-events: none;
+    /* Empêche l'interaction avec le pseudo-élément */
 }
 
-.card-custom__image img {
-    filter: grayscale(50%);
-    /* Applique un effet de gris */
-    mix-blend-mode: multiply;
-    /* Combine les couleurs pour créer le duotone */
-    display: block;
-    /* Supprime les espaces blancs autour de l'image */
-    width: 100%;
-    /* Adapte l'image à la largeur du conteneur */
-    height: auto;
-    /* Maintient les proportions */
-    object-fit: cover;
-    /* Remplit le conteneur sans déformer l'image */
-    z-index: 0;
-    /* S'assure que l'image est sous la superposition */
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+/* Uniformiser les traits horizontaux */
+.card-custom__separator {
+    width: 80%;
+    /* Largeur du trait (relative à la carte) */
+    margin: 10px auto;
+    /* Centré horizontalement avec espacement vertical */
+    border-top: 2px solid #ffffff;
+    /* Couleur blanche */
 }
+
+/* Aligner uniformément le contenu des cartes */
+.card-custom__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Espace uniforme entre les éléments */
+    height: 100%;
+    /* Prend toute la hauteur disponible */
+}
+
+/* Texte descriptif des cartes */
+.card-custom__text {
+    font-size: 14px;
+    line-height: 1.4;
+    /* Espacement vertical dans le texte */
+    margin: 10px 0;
+    /* Espacement autour du texte */
+    text-align: center;
+    /* Centre le texte */
+    font-family: 'Orbitron', sans-serif;
+    /* Police futuriste */
+    flex-grow: 0;
+}
+
+/* Séparateur horizontal sous le titre */
+
+
+/* Lien des cartes (enlève le soulignement par défaut) */
+.card-custom-link {
+    text-decoration: none;
+}
+
+/* Ajoute un soulignement au survol des liens des cartes */
+.card-custom-link:hover {
+    text-decoration: underline;
+}
+
+/* Séparateur entre les cartes */
+.cards-separator {
+    width: 2px;
+    background-color: #ffffff;
+    margin: 0;
+}
+
+
 
 
 
@@ -274,10 +312,12 @@ border-top-left-radius: 15px;
     font-family: 'Orbitron', sans-serif;
     /* Police futuriste */
     flex-grow: 0;
+    
 }
 .card-custom__text a {
     text-decoration: none;
     color: inherit;
+        
 }
 
 .card-custom__text a:hover {
