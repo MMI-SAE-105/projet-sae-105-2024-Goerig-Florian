@@ -8,3 +8,10 @@ video {
     max-width: 100%;
     height: auto;
 }
+
+figcaption {
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+}
+]
