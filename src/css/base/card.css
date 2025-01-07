@@ -13,11 +13,11 @@
     /* Raccourci pour top: 0; right: 0; bottom: 0; left: 0 */
     z-index: 1;
     background-color: #D7E9FF
-        /* Couleur semi-transparente */
-        mix-blend-mode: lighten;
+    /* Couleur semi-transparente */
+    mix-blend-mode: lighten;
     /* Mélange pour éclaircir */
     border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+        border-top-right-radius: 15px;
 }
 
 .card__duotone img {
@@ -33,11 +33,11 @@
     /* Conserve les proportions */
     object-fit: cover;
     /* Remplit le conteneur tout en maintenant les proportions */
-    border-top-left-radius: 15px;
+border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
 
-
+    
 
 
 
@@ -64,7 +64,7 @@
 
     }
 
-
+    
 }
 
 .card__caption {
@@ -218,15 +218,48 @@
     /* Supprime tout décalage vertical */
 }
 
-/* Images dans les cartes */
+.card-custom__image {
+    position: relative;
+    background-color: #6600A5;
+    /* Couleur de base pour le duotone */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    /* Assure que le contenu reste dans les bordures */
+}
+
+.card-custom__image::before {
+    content: "";
+    position: absolute;
+    /* Remplit tout l'espace du conteneur */
+    z-index: 1;
+    background-color: #D7E9FF;
+    /* Couleur claire superposée */
+    mix-blend-mode: lighten;
+    /* Mélange la couleur avec l'image pour l'effet duotone */
+}
+
 .card-custom__image img {
+    filter: grayscale(50%);
+    /* Applique un effet de gris */
+    mix-blend-mode: multiply;
+    /* Combine les couleurs pour créer le duotone */
+    display: block;
+    /* Supprime les espaces blancs autour de l'image */
     width: 100%;
-    height: 150px;
-    /* Fixe une hauteur identique pour toutes les images */
+    /* Adapte l'image à la largeur du conteneur */
+    height: auto;
+    /* Maintient les proportions */
     object-fit: cover;
+    /* Remplit le conteneur sans déformer l'image */
+    z-index: 0;
+    /* S'assure que l'image est sous la superposition */
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
+
+
+
 
 /* Texte descriptif des cartes */
 .card-custom__text {
@@ -241,7 +274,6 @@
     /* Police futuriste */
     flex-grow: 0;
 }
-
 .card-custom__text a {
     text-decoration: none;
     color: inherit;
@@ -255,7 +287,7 @@
 }
 
 .card-custom__link {
-    border: 10 px solid #ffffff;
+    border: 10 px   solid #ffffff;
 }
 
 .cards-separator {
@@ -266,7 +298,6 @@
     margin: 0;
     /* Pas d'espacement supplémentaire */
 }
-
 /* Carte principale pour la filmographie */
 .card-films {
     background-color: #1b3665;
@@ -290,7 +321,7 @@
     /* Centre la carte horizontalement */
     box-sizing: border-box;
     /* Inclut le padding et la bordure dans la largeur totale */
-
+    
 }
 
 /* Titre de la carte */
@@ -346,3 +377,4 @@
     padding: 5px;
     /* Espacement au-dessus du texte */
 }
+
