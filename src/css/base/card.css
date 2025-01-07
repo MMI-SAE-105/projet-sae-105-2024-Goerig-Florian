@@ -83,12 +83,13 @@ border-top-left-radius: 15px;
 .card__excerpt {
     margin-bottom: 15px;
     font-family: 'merriweather', sans-serif;
+    text-align: left;
 
 }
 
 .card__link {
     display: inline-block;
-    background-color: #000000;
+    background-color: #1B3665;
     color: #FFF;
     padding: 10px 20px;
     text-decoration: none;
@@ -101,6 +102,8 @@ border-top-left-radius: 15px;
     margin-right: 20px;
     /* Ajustez selon votre design */
     font-family: 'Orbitron', sans-serif;
+    border: 2px solid #FFF;
+    margin-top: 20px;
 
 }
 
@@ -127,7 +130,6 @@ border-top-left-radius: 15px;
 }
 
 .card p {
-    text-align: justify;
     font-family: 'Orbitron', serif;
 
     ,

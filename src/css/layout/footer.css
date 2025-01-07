@@ -101,9 +101,10 @@ footer a {
 .footer__logo {
     max-width: 50%;
     margin-right: 30px;
-margin-left: 90px;
+margin-left: 50px;
 margin-bottom: 30px;
 margin-top: 20px;
+float: right;
 
 
 }
