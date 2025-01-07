@@ -7,7 +7,6 @@
 body {
     line-height: 1.6;
     background-color: var(--white);
-    font-weight: 300;
     margin: 0;
     padding: 0;
 
@@ -28,39 +27,42 @@ h1 {
 
 h2 {
     font-size: var 32px;
-    padding-left: 20px;
-    padding-right: 20px;
+    
     font-weight: bold;
 }
 
 h3 {
     font-size: 20px;
     font-family: 'merriweather', sans-serif;
-    font-weight: normal;
-    padding-left: 20px;
-    padding-right: 20px;
+    
+    
 
 
 }
 
-
-p {
-    text-decoration: none;
-    padding-left: 20px;
-    padding-right: 20px;
-}
 
 a {
-    text-decoration: none;
-    color: inherit;
+    color: blue;
+    /* Couleur par défaut des liens */
+    text-decoration: underline;
+    /* Souligne les liens */
 }
 
 a:hover {
+    text-decoration: none;
+    /* Pas de soulignement au survol (optionnel) */
+    color: #0056b3;
+    /* Couleur légèrement différente */
     text-decoration: underline;
-    /* Facultatif */
-    color: #ffffff;
-    /* Facultatif */
+        /* Facultatif */
+        color: #ffffff;
+        /* Facultatif */
 }
+
+
+
+
+    
 
 button,
 input,
@@ -161,3 +163,6 @@ textarea {
     margin-right: 20px;
 }
 
+p {
+    
+}
