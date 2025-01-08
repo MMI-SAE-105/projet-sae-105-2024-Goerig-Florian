@@ -86,6 +86,7 @@ dialog#lightbox.sortie {
     max-width: 50%;
     /* Taille maximale pour les miniatures */
     margin: 20px auto;
+    margin-top: 40px;
     /* Centre les miniatures */
     display: block;
     /* Force un comportement de bloc */
