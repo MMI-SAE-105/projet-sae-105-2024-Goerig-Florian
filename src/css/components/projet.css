@@ -1,0 +1,79 @@
+/* Conteneur principal */
+.logos-list {
+    
+    background-color: #f9f9f9;
+}
+
+/* Liste des logos */
+.logos-container {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    /* Empile les éléments verticalement */
+    gap: 20px;
+    /* Espacement entre les éléments */
+}
+
+/* Chaque élément */
+.logo-item {
+    display: flex;
+    flex-direction: row;
+    /* Aligne logo et titre en ligne */
+    align-items: center;
+    /* Centre verticalement les éléments */
+    gap: 20px;
+    /* Espace entre le logo et le titre */
+    justify-content: start;
+    /* Aligne tout à gauche */
+    border: 1px solid #ddd;
+}
+
+/* Lien */
+.logo-link {
+    display: flex;
+    align-items: center;
+    /* Centre verticalement logo et texte */
+    text-decoration: none;
+    /* Supprime le soulignement */
+    color: #333;
+    /* Couleur par défaut */
+    font-weight: bold;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Logo */
+.logo-icon {
+    width: 100px;
+    /* Taille fixe pour tous les logos */
+    height: 100px;
+    /* Assure une taille uniforme */
+    object-fit: contain;
+    /* Garde les proportions */
+    display: block;
+    margin-right: 50px;
+    margin-left: 20px;
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Titre */
+.logo-title {
+    font-size: 1rem;
+    color: #555;
+    /* Couleur légèrement grisée */
+    text-align: left;
+    /* Aligne le texte à gauche */
+    flex: 1;
+    /* Permet au texte de s'ajuster à l'espace restant */
+}
+
+/* Hover */
+.logo-link:hover {
+    color: #6c63ff;
+    /* Change la couleur au survol */
+    transform: scale(1.05);
+    /* Légèrement plus grand au survol */
+}
