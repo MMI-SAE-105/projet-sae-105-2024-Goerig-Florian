@@ -23,8 +23,6 @@
 }
 
 .page__text {
-    
-    margin-top: 20px;    
     font-family: 'merriweather', sans-serif;
     padding-left: 20px;
     padding-right: 20px;
@@ -36,6 +34,6 @@
 }
 
 .page__text h2 {
-    color : #0044A5;
+    color: #0044A5;
     font-weight: bold;
 }

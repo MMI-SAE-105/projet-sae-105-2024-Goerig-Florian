@@ -1,0 +1,122 @@
+/* Style de base */
+body {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Conteneur principal */
+.accordeon {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style des éléments <details> */
+details {
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #f7f7f7;
+    width: 100%;
+    /* Largeur uniforme */
+}
+
+/* Style pour les <summary> */
+summary {
+    padding: 15px 20px;
+    /* Espacement uniforme */
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #1B3665;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Centrage vertical */
+    transition: background-color 0.3s ease;
+   color: #ffffff;
+font-family: 'Orbitron', sans-serif;
+letter-spacing: 0.15em
+}
+
+/* Icône flèche */
+summary::after {
+    content: "⯈";
+    font-size: 1.2rem;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+/* Flèche qui pivote quand <details> est ouvert */
+details[open] summary::after {
+    transform: rotate(90deg);
+}
+
+/* Survol des <summary> */
+summary:hover {
+    background-color: #1B3665;
+}
+
+/* Contenu déroulé */
+details .texte {
+    padding: 15px 20px;
+    font-size: 1rem;
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+
+/* Animation de transition pour le contenu */
+details[open] .texte {
+    animation: fadeIn 0.3s ease;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Style des séparateurs (optionnel) */
+.separator {
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+    margin: 20px 0;
+}
+
+/* Style pour le texte de la page */
+.page__text {
+    text-align: center;
+    font-size: 1rem;    
+    padding: 20px;
+    color: black;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .accordeon {
+        padding: 10px;
+    }
+
+    summary {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    details .texte {
+        padding: 10px 15px;
+    }
+}

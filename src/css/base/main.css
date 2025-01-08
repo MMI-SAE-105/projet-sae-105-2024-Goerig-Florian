@@ -40,7 +40,7 @@
     position: relative;
 }
 
-ghtbox */
+
 
 }
 body {
@@ -48,7 +48,7 @@ body {
     background-color: var(--white);
     margin: 0;
     padding: 0;
-
+    
 
 }
 
@@ -56,6 +56,7 @@ h1,
 h2 {
     font-weight: normal;
     font-family: 'Orbitron', sans-serif;
+    letter-spacing: 0.1em
 }
 
 h1 {
@@ -66,17 +67,19 @@ h1 {
 
 h2 {
     font-size: var 32px;
-
     font-weight: bold;
+    text-align: left;
 }
 
 h3 {
     font-size: 20px;
     font-family: 'merriweather', sans-serif;
+    text-align: left;
 }
 
 p {
     font-family: 'Merriweather', sans-serif;
+    text-align: left;
 }
 a {
 
