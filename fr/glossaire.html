@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/css/style.css">
     <script type="module" src="/src/js/script.js"></script>
-    <link rel="icon" href="/assets/icons/mini_logo_header.svg" type="image/svg+xml">
+    <link class="favicon" rel="icon" href="/assets/icons/mini_logo_header.svg" type="image/svg+xml">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
-
-    <title>Frise chronlogique</title>
+    <title>Glossaire</title>
 </head>
 
 <body>
@@ -31,7 +30,7 @@
 
             <ul class="menu__list list-unstyled">
                 <li class="menu__item">
-                    <a class="menu__link" href="/fr/plateforme.html">plateforme pétrolière</a>
+                    <a class="menu__link" href="/fr/plateforme.html">Plateforme pétrolière</a>
                 </li>
                 <li class="menu__item">
                     <a class="menu__link" href="/fr/frise.html">Frise chronologique</a>
@@ -54,39 +53,6 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <div class="timeline">
-            <div class="timeline__title">
-                <h1>Frise Chronologique</h1>
-            </div>
-            <img src="/assets/img/frise_entiere.webp" alt="Frise chronologique" class="timeline__background">
-            <div class="timeline__event timeline__event--left">
-                <p><strong>1891 :</strong><br>
-                    <strong>Première plateforme offshore en eau douce (Lac St. Mary’s, Ohio).</strong></p>
-            </div>
-            <div class="timeline__event timeline__event--right">
-                <p><strong>1930 :</strong><br>
-                    Premières plateformes en eaux peu profondes dans le Golfe du Mexique.</p>
-            </div>
-            <div class="timeline__event timeline__event--left">
-                <p><strong>1947 :</strong><br>
-                    Première plateforme offshore hors de vue des côtes (Golfe du Mexique).</p>
-            </div>
-            <div class="timeline__event timeline__event--right">
-                <p><strong>1960 :</strong><br>
-                    Développement des plateformes fixes pour les eaux peu profondes.</p>
-            </div>
-            <div class="timeline__event timeline__event--left">
-                <p><strong>1980 :</strong><br>
-                    Apparition des plateformes TLP (Tension Leg Platforms).</p>
-            </div>
-            <div class="timeline__event timeline__event--right">
-                <p><strong>2000 :</strong><br>
-                    Innovations pour l’exploitation en eaux ultra-profondes.</p>
-            </div>
-        </div>
-
-    </main>
     <footer class="footer">
         <section class="menu__footer">
             <div class="footer__left">
@@ -95,11 +61,13 @@
                     <li class="footer__item"><a class="footer__link" href="">Autres projets</a></li>
                     <li class="footer__item"><a class="footer__link" href="">A propos</a></li>
                     <li class="footer__item"><a class="footer__link" href="/fr/contact.html">Contact</a></li>
-                    <li class="footer__item"><a class="footer__link" href="">Glossaire</a></li>
+                    <li class="footer__item"><a class="footer__link" href="/fr/glossaire.html">Glossaire</a></li>
                     </ul>
                 </nav>
             </div>
+            <a href="/fr/index.html"></a>
             <img class="footer__logo" src="/assets/icons/logo_texte.svg" alt="logo">
+            <a>
         </section>
         <hr class="separator">
         <section class="footer__contact">
@@ -138,20 +106,5 @@
         </section>
     </footer>
 </body>
-
-</html>
-</body>
-<script>
-    const handleScroll = () => {
-        const header = document.querySelector('.header')
-        if (window.scrollY > 0) {
-            header.classList.add('gradient')
-        } else {
-            header.classList.remove('gradient')
-        }
-    }
-
-    window.addEventListener('scroll', handleScroll)
-</script>
 
 </html>
